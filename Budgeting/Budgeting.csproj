@@ -6,7 +6,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Budget\Budget.cshtml" />
+    <Content Remove="Views\Budget\BugetIndex.cshtml" />
+    <Content Remove="wwwroot\css\favicon.svg" />
+    <Content Remove="wwwroot\css\illustration.jpg" />
+    <Content Remove="wwwroot\css\logomark.svg" />
+    <Content Remove="wwwroot\css\wave.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="Dapper" Version="2.0.123" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.32" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.0" />
   </ItemGroup>
 
 </Project>
