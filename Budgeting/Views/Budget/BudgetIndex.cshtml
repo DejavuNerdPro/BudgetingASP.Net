@@ -12,7 +12,7 @@
         </a>
         <form method="post" action="http://127.0.0.1:5173/logout">
             <button type="submit" class="btn btn-warning">
-                <span>Delete User</span>
+                <span>Logout</span>
                 <svg xmlns="http://www.w3.org/2000/svg"
                      viewBox="0 0 24 24"
                      fill="currentColor"
@@ -29,7 +29,7 @@
         <div class="dashboard">
             <h1>
                 Welcome back,
-                <span class="accent">Sann</span>
+                <span class="accent" id="username">@ViewBag.Username</span>
             </h1>
             <div class="grid-sm">
                 <div class="grid-lg">
@@ -249,3 +249,10 @@
     </main>
     <img src="~/wave.svg" alt="" />
 </div>
+@section Scripts{ 
+<script>
+    $("form").submit(function () {
+        window.location.href = "/Authentication/AuthIndex";
+    });
+</script>
+}

@@ -130,5 +130,12 @@ namespace Budgeting.Controllers
             }
             return null;
         }
+
+        [ActionName("logout")]
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return View("Login");
+        }
     }
 }
