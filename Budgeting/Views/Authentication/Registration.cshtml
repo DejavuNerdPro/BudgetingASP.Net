@@ -135,7 +135,7 @@
             var _confirm_password = $("#confirm_password").val();
             if (_password != _confirm_password) {
                 console.log("Passwords are not same.");
-                $("confirm_password").focus();
+                $("#confirm_password").focus();
             } else {
                 console.log("Validated Password");
                 const _registrationData = { user_name: _user_name, email: _email, password: _password };
@@ -149,11 +149,17 @@
                         var message = response.message;
                         if (message == "transaction_done") {
                             console.log("Successfully Signed Up.");
-                            //Notify.success('Successfully Signed Up.');
+                            Toastify({
+                                text: "Successfully Signed Up.",
+                                duration: 3000
+                            }).showToast();
                             window.location.href = "/Authentication/AuthIndex";
                         } else if (message == "user_already_exist") {
                             console.log("Fail to Sign Up");
-                            //Notify.failure('Fail to Sign Up');
+                            Toastify({
+                                text: "Fail to sign Up.",
+                                duration: 3000
+                            }).showToast();
                         } else {
 
                         }

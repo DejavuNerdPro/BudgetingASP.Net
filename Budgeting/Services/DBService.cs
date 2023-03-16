@@ -13,7 +13,8 @@ namespace Budgeting.Services
         {
 
         }
-        public DbSet<Expensediture> getRow { get; set; }
+        public DbSet<BudgetDataModel> getBudget { get; set; }
+        public DbSet<Expensediture> getExpensediture { get; set; }
         public DbSet<UserDataModel> getUserData { get; set; }
         public DbSet<LoginDataModel> getLoginData { get; set; }
     }

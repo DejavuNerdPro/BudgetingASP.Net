@@ -77,7 +77,21 @@
             data: { requestLoginData: _requestLoginData },
             success: function (response) {
                 console.log({ response });
-                window.location.href = "/Budget/BudgetIndex";
+                if (response.isSuccess == true) {
+                    console.log(response.isSuccess);
+                    Toastify({
+                        text: "Success to login",
+                        duration: 3000
+                    }).showToast();
+                    window.location.href = "/Budget/BudgetIndex";
+                } else {
+                    console.log(response.isSuccess);
+                    Toastify({
+                        text: "Fail to login",
+                        duration: 3000
+                    }).showToast();
+                    window.location.href = "/Authentication/AuthIndex";
+                }
             }
         });
     });

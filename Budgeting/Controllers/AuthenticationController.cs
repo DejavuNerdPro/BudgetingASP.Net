@@ -131,7 +131,7 @@ namespace Budgeting.Controllers
             return null;
         }
 
-        [ActionName("logout")]
+        [ActionName("Logout")]
         public IActionResult Logout()
         {
             HttpContext.Session.Clear();
